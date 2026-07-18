@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #0b1326;
+    color: white;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #0a0a0a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    gap: 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links .nav-azul {
+    color: #2979ff;
+    text-shadow: 0 0 10px #2979ff;
+}
+
+
+
+main {
+    flex-grow: 1;
+    padding: 3rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-equipo {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.header-equipo img {
+    width: 120px;
+    filter: drop-shadow(0 0 15px rgba(41, 121, 255, 0.7));
+}
+
+.header-equipo h1 {
+    color: #2979ff;
+    text-shadow: 0 0 15px #2979ff;
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.header-equipo p {
+    color: #aaa;
+    font-size: 1.2rem;
+}
+
+.grid-jugadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.jugador-card {
+    background: #111;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border-bottom: 4px solid #2979ff;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jugador-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.jugador-card p {
+    margin: 0;
+    color: #888;
+}
+
+.footer { 
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer h3 {
+    color: #aaa;
+}
+
+.twitch-link {
+    display: flex;
+    margin-top: 10px;
+    color: #9146FF; /* Color oficial de Twitch */
+    font-size: 1.2rem;
+    transition: transform 0.2s, color 0.2s;
+    background-color: #321c54;
+    width: 40px;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 40%;
+    justify-content: center;
+}
+
+.twitch-link:hover {
+    color: #fff;
+    transform: scale(1.2);
+}
+
+.btn-cerrar {
+    display: none;
+}
+
+.btn-abrir {
+    display: none;
+}
+
+@media (width <=1000px) {
+
+    .navbar .nav-links:last-child {
+
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .navbar .nav-links:last-child a {
+
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .btn-cerrar {
+        position: absolute;
+        top: 0px;
+        font-size: 3rem;
+        color: white;
+        text-decoration: none;
+        display: block;
+        background-color: #2c2c2c;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .btn-abrir {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        left: 30px;
+        top: 30px;
+        font-size: 3rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        padding: 0;
+        display: flex;
+        z-index: 1000;
+        flex-direction: column;
+        min-height: 100vh;
+        max-height: 100vh;
+        left: -300px;
+        transition: 0.3s ease-in;
+        background-color: #171717;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    #navbar:target {
+        left: 0;
+    }
+
+}

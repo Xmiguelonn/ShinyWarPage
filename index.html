@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Marcador PokeMMO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <a href="#navbar" class="btn-abrir">☰</a>
+    <nav class="navbar" id="navbar">
+        <a href="#" class="btn-cerrar">×</a>
+        <a href="index.html" class="nav-logo">Shiny WAR LAB 2026</a>
+        <div class="nav-links">
+            <a href="https://labmmo.com/">Pagina Web Oficial</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Marcador</a>
+            <a href="verde.html" class="nav-verde">Equipo Verde</a>
+            <a href="rojo.html" class="nav-rojo">Equipo Rojo</a>
+            <a href="azul.html" class="nav-azul">Equipo Azul</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="card-container">
+            <div class="card card-verde">
+                <div class="sprite-container">
+                    <img src="./Marcador PokeMMO_files/venusaur.gif" alt="Venusaur" />
+                </div>
+                <div class="team-name">Equipo verde</div>
+                <div class="score-container">
+                    <div id="score-verde" class="score">0</div>
+                </div>
+            </div>
+            <div class="card card-azul">
+                <div class="sprite-container">
+                    <img src="./Marcador PokeMMO_files/blastoise.gif" alt="Blastoise" />
+                </div>
+                <div class="team-name">Equipo azul</div>
+                <div class="score-container">
+                    <div id="score-azul" class="score">0</div>
+                </div>
+            </div>
+            <div class="card card-roja">
+                <div class="sprite-container">
+                    <img src="./Marcador PokeMMO_files/charizard.gif" alt="Charizard" />
+                </div>
+                <div class="team-name">Equipo rojo</div>
+                <div class="score-container">
+                    <div id="score-rojo" class="score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="status">Conectando a Firebase...</div>
+    </main>
+
+    <footer class="footer">
+        <h3>Página Web propiedad de LAB</h3>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>

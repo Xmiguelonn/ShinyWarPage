@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #050505;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* NAVBAR (Común para todos) */
+.navbar {
+    background-color: #0a0a0a;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #222;
+    gap: 20px;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.nav-links .active {
+    color: #fff;
+}
+
+.nav-links .nav-verde:hover {
+    color: #00c853;
+    text-shadow: 0 0 10px #00c853;
+}
+
+.nav-links .nav-rojo:hover {
+    color: #ff1744;
+    text-shadow: 0 0 10px #ff1744;
+}
+
+.nav-links .nav-azul:hover {
+    color: #2979ff;
+    text-shadow: 0 0 10px #2979ff;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+}
+
+/* TUS ESTILOS DE MARCADOR */
+.card-container {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.card-verde {
+    background: linear-gradient(to top, black 70%, #00c853);
+    border: 3px solid #00c853;
+    box-shadow: 0 0 15px #00c8534d;
+}
+
+.card-azul {
+    background: linear-gradient(to top, black 70%, #2979ff);
+    border: 3px solid #2979ff;
+    box-shadow: 0 0 15px #2979ff4d;
+}
+
+.card-roja {
+    background: linear-gradient(to top, black 70%, #ff1744);
+    border: 3px solid #ff1744;
+    box-shadow: 0 0 15px #ff17444d;
+}
+
+.card-verde .team-name,
+.card-verde .score {
+    color: #00c853;
+}
+
+.card-verde .score-container {
+    border-top: 2px solid #00c853;
+}
+
+.card-azul .team-name,
+.card-azul .score {
+    color: #2979ff;
+}
+
+.card-azul .score-container {
+    border-top: 2px solid #2979ff;
+}
+
+.card-roja .team-name,
+.card-roja .score {
+    color: #ff1744;
+}
+
+.card-roja .score-container {
+    border-top: 2px solid #ff1744;
+}
+
+.sprite-container {
+    display: grid;
+    place-items: center;
+    flex-grow: 1;
+    width: 450px;
+    align-content: end;
+    padding-bottom: 70px;
+}
+
+.sprite-container img {
+    width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* El drop-shadow para los pokemon que me pediste */
+.card-verde .sprite-container img {
+    filter: drop-shadow(0 0 15px rgba(0, 200, 83, 0.7));
+}
+
+.card-azul .sprite-container img {
+    filter: drop-shadow(0 0 15px rgba(41, 121, 255, 0.7));
+}
+
+.card-roja .sprite-container img {
+    filter: drop-shadow(0 0 15px rgba(255, 23, 68, 0.7));
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 3px #0008;
+    font-family: "Press Start 2P", system-ui, sans-serif;
+}
+
+.score-container {
+    width: 80%;
+    border-top: 2px solid #ffffff4d;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.score {
+    font-size: 72px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    text-shadow: 0 0 10px currentColor;
+    transition: transform 0.15s ease;
+    font-family: "Press Start 2P", system-ui, sans-serif;
+}
+
+@keyframes scoreBumpAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.25);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.score.bump {
+    animation: scoreBumpAnim 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.status {
+    position: fixed;
+    right: 12px;
+    bottom: 8px;
+    color: #fff9;
+    font-size: 12px;
+}
+
+body.connected .status {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.footer h3 {
+    color: #aaa;
+}
+
+.btn-cerrar {
+    display: none;
+}
+
+.btn-abrir {
+    display: none;
+}
+
+@media (width <=1100px) {
+
+    .card-container {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+
+@media (width <=1000px) {
+
+    .navbar .nav-links:last-child {
+
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .navbar .nav-links:last-child a {
+
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .btn-cerrar {
+        position: absolute;
+        top: 0px;
+        font-size: 3rem;
+        color: white;
+        text-decoration: none;
+        display: block;
+        background-color: #2c2c2c;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 10px;
+        border-radius: 0 0 25px 25px;
+    }
+
+    .btn-abrir {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        left: 30px;
+        top: 30px;
+        font-size: 3rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        padding: 0;
+        display: flex;
+        z-index: 1000;
+        flex-direction: column;
+        min-height: 100vh;
+        max-height: 100vh;
+        left: -300px;
+        transition: 0.3s ease-in;
+        background-color: #171717;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    #navbar:target {
+        left: 0;
+    }
+
+}
