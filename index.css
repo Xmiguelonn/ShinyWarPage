@@ -313,6 +313,17 @@ body.connected .status {
     transform: translateY(-5px);
 }
 
+.logro-item .img-container {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.logro-item .img-container img {
+    width: auto;
+    height: auto;
+    object-fit: none;
+}
+
 .logro-titulo {
 
     font-family: "Segoe UI", Roboto, Arial, sans-serif;
