@@ -125,7 +125,6 @@ main {
     border-radius: 10px;
     text-align: center;
     border: 1px solid rgba(255, 23, 68, 0.15);
-    border-bottom: 4px solid #ff1744;
     min-height: 70px;
     display: flex;
     flex-direction: column;
@@ -139,6 +138,7 @@ main {
     transform: translateY(-3px);
     border-color: #ff1744;
     box-shadow: 0 4px 20px rgba(255, 23, 68, 0.2);
+        border-bottom: 4px solid #ff1744;
 }
 
 .jugador-card h3 {
