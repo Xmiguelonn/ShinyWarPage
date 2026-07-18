@@ -8,6 +8,10 @@ body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 
 .background-animation {
     position: fixed;
@@ -127,6 +131,7 @@ main {
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+
 .jugador-card:hover {
     transform: translateY(-3px);
     border-color: #00c853;
@@ -144,7 +149,11 @@ main {
 
 .jugador-card p {
     margin: 0;
-    color: #888;
+    color: #a7f3d0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; 
 }
 
 .footer {
