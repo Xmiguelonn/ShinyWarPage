@@ -20,7 +20,7 @@ html {
     height: 100%;
     z-index: 0;
     pointer-events: none;
-    background-image: 
+    background-image:
         radial-gradient(circle, rgba(255, 255, 255, 0.15) 1.5px, transparent 1.5px),
         radial-gradient(circle, rgba(255, 255, 255, 0.1) 2.5px, transparent 2.5px);
     background-size: 60px 60px, 120px 120px;
@@ -29,18 +29,23 @@ html {
 }
 
 @keyframes moveParticles {
-    from { background-position: 0 0, 30px 30px; }
-    to { background-position: 0 -1200px, 30px -2400px; }
+    from {
+        background-position: 0 0, 30px 30px;
+    }
+
+    to {
+        background-position: 0 -1200px, 30px -2400px;
+    }
 }
 
-/* NAVBAR (Común para todos) */
 .navbar {
     background-color: #0a0a0a;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     gap: 20px;
     position: relative;
     z-index: 2;
@@ -106,7 +111,7 @@ main {
 .card {
     width: 300px;
     height: 500px;
-    border-radius:25px; 
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -170,7 +175,7 @@ main {
     display: grid;
     place-items: center;
     flex-grow: 1;
-    width: 100%; 
+    width: 100%;
     align-content: end;
     padding-bottom: 70px;
 }
@@ -223,10 +228,21 @@ main {
 }
 
 @keyframes scoreBumpAnim {
-    0% { transform: scale(1); }
-    30% { transform: scale(1.25); }
-    60% { transform: scale(0.95); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(1.25);
+    }
+
+    60% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .score.bump {
@@ -265,14 +281,179 @@ body.connected .status {
     display: none;
 }
 
-@media (width <= 1100px) {
+.logros-generales {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px auto 20px auto;
+    max-width: 900px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.logro-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3 ease;
+    text-align: center;
+}
+
+.logro-item:hover {
+    transform: translateY(-5px);
+}
+
+.logro-titulo {
+
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.logro-ganador {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.badge-fb {
+    background-color: rgba(255, 23, 68, 0.05);
+    border: 1px solid rgba(255, 23, 68, 0.3);
+    transition: transform 0.3s ease-out;
+}
+
+.badge-fb .logro-titulo {
+    color: #ff5252;
+    text-shadow: 0 0 8px rgba(255, 23, 68, 0.4);
+}
+
+.badge-fb .logro-ganador {
+    color: #ffffff;
+}
+
+.badge-fb:hover {
+    box-shadow: 0 0 20px rgba(255, 23, 68, 0.3);
+    background: rgba(255, 23, 68, 0.1);
+    border-bottom: 3px solid #ff1744;
+}
+
+.badge-mv {
+    background: rgba(0, 229, 255, 0.03);
+    border: 1px solid rgba(0, 229, 255, 0.3);
+    transition: transform 0.3s ease-out;
+}
+
+.badge-mv .logro-titulo {
+    color: #00e5ff;
+    text-shadow: 0 0 8px rgba(0, 229, 255, 0.4);
+}
+
+.badge-mv .logro-ganador {
+    color: #ffffff;
+}
+
+.badge-mv:hover {
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+    background: rgba(0, 229, 255, 0.08);
+    border-bottom: 3px solid #00e5ff;
+}
+
+
+.staff-section {
+    max-width: 1200px;
+    width: 100%;
+    margin: 60px auto 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.staff-title {
+    font-family: 'Press Start 2P', monospace;
+    font-size: 0.9rem;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.staff-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.staff-card {
+    flex: 1;
+    min-width: 280px;
+    max-width: 360px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.staff-info h3 {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.staff-role {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.staff-desc {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #94a3b8;
+    margin: 0;
+}
+
+
+@media (width <=1100px) {
     .card-container {
         align-items: center;
         flex-direction: column;
     }
 }
 
-@media (width <= 1000px) {
+@media (width <=1000px) {
     .btn-abrir {
         display: block;
         position: fixed;
@@ -300,7 +481,7 @@ body.connected .status {
         line-height: 1;
         transition: color 0.2s ease;
         display: block !important;
-        z-index: 1001; 
+        z-index: 1001;
     }
 
     .btn-cerrar:hover {
@@ -394,5 +575,24 @@ body.connected .status {
     .navbar .nav-links .nav-azul:hover {
         border-color: #2979ff;
         box-shadow: 0 0 12px rgba(41, 121, 255, 0.3);
+    }
+
+    .logros-generales {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .staff-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .staff-card {
+        width: 100%;
+    }
+
+    .staff-title {
+        font-size: 0.8rem;
+        line-height: 1.5;
     }
 }

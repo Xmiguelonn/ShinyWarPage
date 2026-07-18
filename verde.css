@@ -22,7 +22,7 @@ html {
     z-index: 0;
     pointer-events: none;
 
-    background-image: 
+    background-image:
         radial-gradient(circle, rgba(0, 200, 83, 0.1) 3px, transparent 3px),
         radial-gradient(circle, rgba(102, 187, 106, 0.06) 4px, transparent 4px);
     background-size: 100px 100px, 160px 160px;
@@ -31,8 +31,13 @@ html {
 }
 
 @keyframes moveLeaves {
-    from { background-position: 0 0, 50px 50px; }
-    to { background-position: 500px 1000px, 300px 1600px; }
+    from {
+        background-position: 0 0, 50px 50px;
+    }
+
+    to {
+        background-position: 500px 1000px, 300px 1600px;
+    }
 }
 
 /* NAVBAR */
@@ -42,7 +47,8 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     gap: 20px;
     position: relative;
     z-index: 2;
@@ -153,7 +159,7 @@ main {
     font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .footer {
@@ -177,7 +183,7 @@ main {
 }
 
 
-@media (width <= 1000px) {
+@media (width <=1000px) {
     .btn-abrir {
         display: block;
         position: fixed;
