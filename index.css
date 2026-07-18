@@ -51,8 +51,7 @@ html {
     z-index: 2;
 }
 
-.navbar .nav-links a,
-.navbar .nav-links:last-child a {
+.navbar .nav-links a {
     display: flex;
     flex-direction: row;
     justify-content: center;

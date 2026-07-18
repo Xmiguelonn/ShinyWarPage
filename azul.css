@@ -50,6 +50,21 @@ html {
     z-index: 2;
 }
 
+.navbar .nav-links a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
 .nav-logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -74,6 +89,21 @@ html {
 }
 
 .nav-links .nav-azul {
+    color: #2979ff;
+    text-shadow: 0 0 10px #2979ff;
+}
+
+.nav-links .nav-verde:hover {
+    color: #00c853;
+    text-shadow: 0 0 10px #00c853;
+}
+
+.nav-links .nav-rojo:hover {
+    color: #ff1744;
+    text-shadow: 0 0 10px #ff1744;
+}
+
+.nav-links .nav-azul:hover {
     color: #2979ff;
     text-shadow: 0 0 10px #2979ff;
 }
@@ -196,7 +226,7 @@ main {
     display: none;
 }
 
-@media (width <=1000px) {
+@media (width <=1100px) {
     .btn-abrir {
         display: block;
         position: fixed;
