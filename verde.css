@@ -249,6 +249,27 @@ main {
         color: #00c853;
     }
 
+        .navbar {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 300px;
+        min-height: 100vh;
+        max-height: 100vh;
+        top: 0;
+        left: -300px;
+        z-index: 1000;
+        background-color: rgba(10, 10, 10, 0.9);
+        backdrop-filter: blur(15px);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 40px 20px;
+        box-sizing: border-box;
+        gap: 25px;
+        transition: left 0.3s ease-in-out;
+    }
+
     .nav-logo {
         font-size: 1.3rem;
         text-align: left;
