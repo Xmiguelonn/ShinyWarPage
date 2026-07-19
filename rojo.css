@@ -152,6 +152,10 @@ main {
     gap: 20px;
 }
 
+* {
+    cursor: url('https://cdn.cursors-4u.net/previews/ghost-trio-gengar-9738b955-32.webp') 32 32, auto !important;
+}
+
 .jugador-card {
     background: #140c0d;
     padding: 2rem;

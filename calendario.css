@@ -12,6 +12,10 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    cursor: url('https://cdn.cursors-4u.net/previews/ghost-trio-gengar-9738b955-32.webp') 32 32, auto !important;
+}
+
 .background-animation {
     position: fixed;
     top: 0;
