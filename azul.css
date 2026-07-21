@@ -157,6 +157,7 @@ main {
     border-radius: 10px;
     text-align: center;
     border: 1px solid rgba(41, 121, 255, 0.15);
+    border-bottom: 4px solid transparent;
     min-height: 70px;
     display: flex;
     flex-direction: column;
