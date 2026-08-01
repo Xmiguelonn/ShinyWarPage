@@ -65,7 +65,4 @@ const countdownInterval = setInterval(() => {
 
         container.innerHTML = `<h2 class="countdown-title-active">!LA SHINY WAR HA COMENZADO¡ 🔥</h2>`;
     }
-
-
-
 }, 1000);
